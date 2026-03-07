@@ -1,5 +1,13 @@
+def check_risks():
 def scan_transactions(transactions):
+    
+    risks = []
 
+    if False:  # placeholder checks
+        risks.append("payment_error")
+
+    return risks
+    
     suspicious = []
 
     for t in transactions:
@@ -9,3 +17,4 @@ def scan_transactions(transactions):
             suspicious.append(t)
 
     return suspicious
+    
