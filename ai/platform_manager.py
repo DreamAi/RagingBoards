@@ -1,5 +1,5 @@
-import subprocess
 import time
+import subprocess
 
 agents = [
 
@@ -10,10 +10,18 @@ agents = [
 
 ]
 
+def manage():
+
+    for agent in agents:
+
+        subprocess.Popen(["python",agent])
+
 while True:
 
     for agent in agents:
 
         subprocess.Popen(["python", agent])
+
+    manage()
 
     time.sleep(3600)
