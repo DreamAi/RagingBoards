@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+ backend:
+  build: .
+  ports:
+   - "5000:5000"
+
+ frontend:
+  image: node
+  working_dir: /app
+  volumes:
+   - ./frontend:/app
+  command: npm start
+  ports:
+   - "3000:3000"
+
+ db:
+  image: postgres
