@@ -1,6 +1,12 @@
 fastapi
 uvicorn
-sqlalchemy
+numpy
+psutil
+cryptography
+scikit-learn
 pydantic
+reportlab
+python-dotenv
+sqlalchemy
 sqlite3
 python-multipart
