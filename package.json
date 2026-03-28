@@ -1,0 +1,11 @@
+{
+  "name": "raging-boards",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix apps/api\" \"npm run dev --prefix apps/web\"",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
