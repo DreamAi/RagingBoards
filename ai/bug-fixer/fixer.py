@@ -1,4 +1,4 @@
-import subprocess
+Hi import subprocess
 import re
 
 def run_tests():
@@ -31,3 +31,16 @@ def auto_fix():
 
 if __name__ == "__main__":
     auto_fix()
+    
+def safe_fix():
+    print("Attempting safe fix...")
+
+    subprocess.run("git stash", shell=True)
+
+    auto_fix()
+
+    result = subprocess.run("pytest", shell=True)
+
+    if result.returncode != 0:
+        print("Fix failed → rolling back")
+        subprocess.run("git reset --hard", shell=True)
