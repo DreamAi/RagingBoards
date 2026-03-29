@@ -1,0 +1,6 @@
+{
+  "autoUpdate": true,
+  "deployDocker": true,
+  "launchBrowser": true,
+  "ciEnabled": true
+}
